@@ -9,6 +9,8 @@ test('Dashboard renders', () => {
 
 test('Dashboard renders with gate', () => {
   const { getByText } = render(<Dashboard />);
+
+  //Dashboard is rendering with the gate available
   getByText(/unlocked/i);
   getByText(/lock gate/i);
   getByText(/open/i);
