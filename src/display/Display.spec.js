@@ -25,13 +25,13 @@ test("Display renders 'locked' upon locked prop being true", () => {
   getByText(/locked/i);
 });
 
-it('Classname of "red-led" is chosed when closed/locked is true', () => {
+test('Classname of "red-led" is chosed when closed/locked is true', () => {
   const component = render(<Display closed={true} locked={false} />);
   const disp = component.getByText(/closed/i);
   expect(disp).toHaveClass('red-led');
 });
 
-it('Classname of "green-led" is chosed when open is true', () => {
+test('Classname of "green-led" is chosed when open is true', () => {
   const component = render(<Display closed={false} locked={false} />);
   const disp = component.getByText(/open/i);
   expect(disp).toHaveClass('green-led');
